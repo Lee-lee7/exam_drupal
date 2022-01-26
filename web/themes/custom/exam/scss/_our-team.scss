@@ -1,0 +1,78 @@
+@import "variables";
+@import "mixins";
+
+#block-views-block-view-our-team-block-1 {
+    h2 {
+        @include style-h2;
+    }
+    &::before {
+        @include style-line-title;
+    }
+    .views-col {
+        text-align: center;
+    }
+    .field--name-field-our-team {
+        &__name {
+            margin-top: $gutter-th;
+            font-size: 25px;
+        }
+        &__text {
+            font-size: 12px;
+            margin-top: -4px;
+            opacity: $op-imp;
+        }
+        &__link {
+            max-width: 101px;
+            background-color: $grey;
+            margin: $center;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            font-size: 14px;
+            margin-top: $gutter-ft;
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+    .social-media {
+        &-link-icon {
+            &--facebook {
+                span {
+                    @include style-fa;
+                    margin-right: 10px;
+                }
+            }
+            &--linkedin {
+                span {
+                    @include style-fa;
+                    margin-right: 10px;
+                }
+            }
+            &--twitter {
+                span {
+                    @include style-fa;
+                }
+            }
+        }
+        &-links--platforms {
+            display: flex;
+            justify-content: left;
+            margin-top: -25px;
+            margin-left: 60px;
+        }
+    }
+}
+.action-flag {
+    @include flag;
+    a {
+        @include flag-a;
+    }
+}
+.action-unflag {
+    @include flag;
+    a {
+        @include flag-a;
+        background-image: url(../img/heart1.png);
+    }
+}

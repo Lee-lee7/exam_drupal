@@ -1,0 +1,93 @@
+@import "variables";
+@import "mixins";
+@import "variables_drupal";
+@import "variables_bootstrap";
+
+.breadcrumb-item {
+    font-size: 0px;
+}
+#block-contacttitle{
+    margin-top: -100px;
+}
+.contact {
+    &-title {
+        text-align: center;
+        margin-top: 148px;
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        &::after {
+            content: "";
+            display: block;
+            height: 4px;
+            background-color: black;
+            opacity: 0.2;
+            position: relative;
+            width: 60px;
+            margin: 0 auto;
+        }
+    }
+}
+.layout__region {
+    &--first {
+        form {
+            max-width: 463px;
+            margin-left: 163px;
+        }
+        input {
+            min-height: 56px;
+        }
+        textarea {
+            min-height: 190px;
+        }
+    }
+    &--second {
+        margin-top: 3em;
+        .given-name {
+            font-weight: 600;
+            font-size: 17px;
+        }
+        .country {
+            font-size: 0px;
+        }
+        .contact {
+            &-phone {
+                margin-top: -35px;
+            }
+        }
+    }
+}
+iframe {
+    min-width: 465px;
+    min-height: 247px;
+    margin-top: 35px;
+}
+.form-item-name {
+    margin-top: 3em;
+}
+
+.field--name-field-contact-webform form{
+width: 463px;
+margin-left: 165px;
+}
+.node--type-contacts{
+    .layout__region--first{
+        border-right: none;
+    }
+    .layout--twocol-section{
+        .layout__region--second{
+            display: block !important;
+            margin-left: 565px;
+        }
+    }
+    .form-actions {
+        input {
+            min-width: 190px;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            background-color: #e03114;
+            border: none;
+        }
+    }
+} 

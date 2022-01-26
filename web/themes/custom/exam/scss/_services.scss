@@ -1,0 +1,53 @@
+@import "variables";
+@import "mixins";
+
+#block-views-block-services-block-1 {
+    text-align: center;
+    margin-top: 102px;
+    h2 {
+        @include style-h2;
+    }
+    &::before {
+        @include style-line-title;
+    }
+    .field--type {
+        &-image {
+            width: 150px;
+            height: 118px;
+            margin: $center;
+            margin-top: 60px;
+        }
+        &-text {
+            margin-top: 29px;
+            font-size: 21px;
+        }
+    }
+    .field--name-field {
+        &-text {
+            &-development {
+                font-size: 12px;
+                margin-top: 12px;
+                line-height: $line-height-first;
+                padding: 0px 10px;
+                opacity: $op-imp;
+            }
+        }
+        &-link {
+            &-development {
+                margin: $center;
+                width: 100px;
+                background-color: $blue;
+                margin-top: 28px;
+                height: $gutter-th;
+                text-align: center;
+                a {
+                    @include style-button-link;
+                }
+            }
+        }
+    }
+    .layout__region {
+        margin: $center;
+        padding-left: 48px;
+    }
+}

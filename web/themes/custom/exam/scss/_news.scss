@@ -1,0 +1,163 @@
+@import "variables";
+@import "mixins";
+@import "variables_drupal";
+@import "variables_bootstrap";
+
+#block-views-block-view-news-block-1 {
+    margin-top: 163px;
+    &::before {
+        @include style-line-title;
+        margin-top: 23px;
+        margin-left: 6px;
+        width: 66%;
+    }
+    h2 {
+        @include style-h2;
+        &::before {
+            @include style-line-title;
+            margin-left: $none;
+            width: 0px;
+        }
+        &::after {
+            @include style-line-title;
+            left: $none;
+            width: 0px;
+            margin-top: -13px;
+            margin-left: 330px;
+        }
+    }
+
+    .layout--twocol-section {
+        margin-left: 33px;
+        margin-bottom: 50px;
+        margin-top: -12px;
+        background-color: white;
+        max-width: 590px;
+    }
+    article {
+        h2 {
+            &::before {
+                @include style-line-title;
+                width: $none;
+            }
+            background-color: transparent;
+            &::after {
+                @include style-line-title;
+                width: $none;
+            }
+        }
+    }
+}
+.block-field-blocknodenewsfield-news {
+    &-date {
+        text-transform: uppercase;
+        font-size: 27px;
+    }
+    &-day {
+        font-size: 47px;
+        color: $blue;
+        font-weight: 600;
+        line-height: $line-height-second;
+        margin-top: -4px;
+    }
+    &-year {
+        margin-left: 8px;
+        margin-top: -6px;
+        opacity: $op-imp;
+        font-size: 15px;
+    }
+    &-image {
+        margin-top: 12px;
+        margin-left: 17px;
+    }
+    &-writer {
+        @include news-name;
+        opacity: $op-imp;
+    }
+    &-name {
+        @include news-name;
+    }
+    &-profession {
+        @include news-name;
+        //padding-right: 146px;
+        color: $blue;
+    }
+    &-date-second {
+        @include news-name;
+        position: inherit;
+        text-transform: uppercase;
+        opacity: $op-imp;
+        margin-right: $gutter-th;
+        -webkit-box-align: end;
+    }
+    &-title {
+        font-size: 25px;
+        margin-left: 73px;
+        padding-left: $gutter-ft;
+        border-left: 2px solid rgba(60, 60, 69, 0.3);
+    }
+    &-te {
+        text-transform: uppercase;
+        font-size: 11px;
+        margin-left: 73px;
+        padding-left: $gutter-ft;
+        margin-top: 10px;
+        line-height: $line-height-first;
+        padding-right: 33px;
+        border-left: 2px solid rgba(60, 60, 69, 0.3);
+        text-align: justify;
+    }
+    &-button {
+        div {
+            position: inherit;
+            background-color: $grey;
+            margin-top: 16px;
+            height: 30px;
+            //   margin-right: 35px;
+            margin-left: 471px;
+            width: 100px;
+            a {
+                font-size: 13px;
+                color: white;
+                padding-top: 3px;
+            }
+        }
+    }
+}
+
+#edit-submit-view-news {
+    text-transform: capitalize;
+    min-width: 100px;
+}
+.form--inline {
+    display: flex;
+    margin-top: 41px;
+    #edit-submit-view-news {
+        position: absolute;
+        margin-top: -15px;
+        min-width: 40px;
+        font-size: 16px;
+        background-color: rgba(59, 183, 255, 0.808);
+        margin-top: 8px;
+        border: none;
+    }
+    #edit-keys {
+        width: 345px;
+        margin-left: $gutter-ft;
+    }
+}
+.node--type-news {
+    h2 {
+        background-color: transparent;
+    }
+}
+.form-item-keys {
+    font-size: $none;
+    padding-top: 23px;
+}
+
+.view-id-view_news {
+    background: repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.1), #fff 3px, #fff 10px, #fff 0px);
+    height: 417px;
+    margin-top: -25px;
+}

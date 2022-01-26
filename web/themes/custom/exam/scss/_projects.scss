@@ -1,0 +1,114 @@
+@import "variables";
+@import "mixins";
+
+#block-views-block-projects-block-1 {
+    margin-top: 104px;
+    text-align: center;
+    margin-bottom: 92px;
+    h2 {
+        @include style-h2;
+    }
+    &::before {
+        @include style-line-title;
+    }
+    .field--name-field {
+        &-text {
+            &-projects {
+                margin-top: $gutter-th;
+                font-size: 25px;
+            }
+        }
+        &-link {
+            &-projects {
+                margin: $center;
+                width: 77px;
+                background-color: $grey;
+                margin-top: 14px;
+                height: $gutter-th;
+                text-align: center;
+                a {
+                    @include style-button-link;
+                }
+            }
+        }
+        &-image-projects {
+            img {
+                @include style-img;
+            }
+
+            &::before {
+                content: "";
+                display: block;
+                height: 1px;
+                background-color: $grey;
+                opacity: 1;
+                position: absolute;
+                width: 290px;
+                margin-top: 440px;
+                margin-left: 16px;
+                z-index: 1;
+            }
+        }
+        &-taxonomy {
+            &-services {
+                margin-top: 4px;
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .view {
+        &-content {
+            margin-top: 50px;
+        }
+        &-id-projects {
+            background: repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.1), #fff 3px, #fff 10px, #fff 0px);
+            height: 710px;
+        }
+    }
+
+    .node--view-mode-teaser {
+        h2 {
+            background-color: transparent;
+        }
+        .node__content {
+            background-color: white;
+            padding-bottom: 11px;
+        }
+    }
+    .col {
+        &-1 {
+            .field--name-field-taxonomy-services {
+                a {
+                    color: darkturquoise;
+                }
+            }
+        }
+        &-2 {
+            .field--name-field-taxonomy-services {
+                a {
+                    color: blueviolet;
+                }
+            }
+        }
+        &-3 {
+            .field--name-field-taxonomy-services {
+                a {
+                    color: chocolate;
+                }
+            }
+        }
+        &-4 {
+            .field--name-field-taxonomy-services {
+                a {
+                    color: deepskyblue;
+                }
+            }
+        }
+    }
+}
+.view-id-projects {
+    background: repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.1), #fff 3px, #fff 10px, #fff 0px);
+    height: 710px;
+}
